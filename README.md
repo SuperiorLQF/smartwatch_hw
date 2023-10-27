@@ -10,7 +10,11 @@ TBD -> FIXING -> OK -> DEBUGING -> OK
                     考虑的点有：软件的需求，需要跑多少应用，应用的难度运算量，模型大小等等，是否有NPU，开发调用NPU的难度；最好能运行ubuntu，兼顾低功耗。
                     可选清单有RV1106,RK3566(香橙派CM4),稚晖君的全志方案。
 
-
+[ TBD ]  [0002]     wifi和蓝牙驱动移植；如果核心板上没有WIFI/蓝牙芯片，是否需要把WIFI芯片放在底板
+                    硬件：WIFI芯片选型瑞昱、或者其他可选方案（因为realtek比较贵），当然如果驱动或者开源参考设计表较多的话，还是首选realtek
+                         PCB布局布线，连接方式（对板连接等），如何不影响WIFI芯片的传输
+                    软件上：Linux的config修改，内核编译，设备树添加，加入自启动
+                    
 ************************************
 图形化驱动相关资料和关键词:**LVGL,SquareLine Studio(LVGL智能化开发)[https://zhuanlan.zhihu.com/p/574436496]**
 立创上的某个大佬做的智能手环[https://oshwhub.com/no_chicken/zhi-neng-shou-biao-OV-Watch_V2.2]
