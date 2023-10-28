@@ -16,6 +16,7 @@ TBD -> FIXING -> OK -> DEBUGING -> OK
                     软件上：Linux的config修改，内核编译，设备树添加，加入自启动
                     
 ************************************
+reference:立创EDA上面有几个很棒的设计，但是基本都是STM32或者ESP32实现，我们可以重点关注其外设以及电源管理模块
 图形化驱动相关资料和关键词:**LVGL,SquareLine Studio(LVGL智能化开发)[https://zhuanlan.zhihu.com/p/574436496]**
 立创上的某个大佬做的智能手环[https://oshwhub.com/no_chicken/zhi-neng-shou-biao-OV-Watch_V2.2]
 
