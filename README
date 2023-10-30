@@ -30,6 +30,9 @@ TBD -> FIXING -> CONFIRM -> OK -> DEBUGING ->CONFIRM -> OK
 ***********************************
 ***********************************
 [23/10/29]	[lc]	Luckfox pico有线联网尝试，Luckfox pico wifi方案选择，Luckfox pico python安装
+[23/10/30]	[lc]	尝试用diskgenius强制ubuntu分盘
+			对比RV1106和RV1103的CFG[https://github.com/LuckfoxTECH/luckfox-pico/blob/main/project/cfg/BoardConfig_IPC/BoardConfig-SPI_NAND-NONE-RV1106_Luckfox_Pico_Pro_Max-IPC.mk]\
+和dts[/luckfox/luckfox-pico/sysdrv/source/kernel/arch/arm/boot/dts]，先注释掉用默认编译，看看能不能从SD卡启动。然后在昨天buildroot的基础上进行编译，增加oem和uaserdata，看一下生成的那几个oem有啥区别
 
 
 ***********************************
