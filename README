@@ -30,8 +30,10 @@ TBD -> FIXING -> CONFIRM -> OK -> DEBUGING ->CONFIRM -> OK
 ***********************************
 ***********************************
 [23/10/29]	[lc]	Luckfox pico有线联网尝试，Luckfox pico wifi方案选择，Luckfox pico python安装
-[23/10/30]	[lc]	尝试用diskgenius强制ubuntu分盘
-			对比RV1106和RV1103的CFG[https://github.com/LuckfoxTECH/luckfox-pico/blob/main/project/cfg/BoardConfig_IPC/BoardConfig-SPI_NAND-NONE-RV1106_Luckfox_Pico_Pro_Max-IPC.mk]\
+[23/10/30]	[lc]	尝试用diskgenius强制ubuntu分盘,失败，原因是群里大佬说瑞芯微的soc toolkit烧录的分区别的工具无法识别，现在看来确实如此，所以最好能在系统一开始配置的\
+					时候就配置一个比较大的存储空间。于是决定先从最基础的来，先注释掉SDK里面的#1048自定义buildroot内容。然后修改cfg文件，设置为emmc启动
+					下面开始试验
+					对比RV1106和RV1103的CFG[https://github.com/LuckfoxTECH/luckfox-pico/blob/main/project/cfg/BoardConfig_IPC/BoardConfig-SPI_NAND-NONE-RV1106_Luckfox_Pico_Pro_Max-IPC.mk]\
 和dts[/luckfox/luckfox-pico/sysdrv/source/kernel/arch/arm/boot/dts]，先注释掉用默认编译，看看能不能从SD卡启动。然后在昨天buildroot的基础上进行编译，增加oem和uaserdata，看一下生成的那几个oem有啥区别
 这个网站是直接将python编译移植到板子上https://blog.csdn.net/h12321hzhy/article/details/106279783?ops_request_misc=&request_id=&biz_id=102&utm_term=%E8%8D%94%E6%9E%9D%E6%B4%BEubuntu&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-106279783.142^v96^pc_search_result_base4&spm=1018.2226.3001.4187
 
